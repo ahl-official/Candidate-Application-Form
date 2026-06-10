@@ -22,7 +22,7 @@ const HEADERS = [
   'Work History Summary', 'Skills', 'Languages', 'LinkedIn URL', 'Portfolio URL', 'References',
   'Tenure Expectation', 'Why Join', 'Achievements', 'Certifications', 'Additional Notes',
   'Resume File', 'Resume Link', 'Status', 'Assigned To', 'Follow Up Date',
-  'Interview ID', 'Interview Score', 'Detailed Summary', 'Green Flags', 'Red Flags', 'Report Link'
+  'Interview ID', 'Interview Score', 'Detailed Summary', 'Green Flags', 'Red Flags', 'Report Link', 'Final Status'
 ];
 
 async function updateHeaders() {
