@@ -182,10 +182,7 @@
         <section class="screen" id="screenError">
           <div class="state-icon err"><i class="fas fa-link-slash"></i></div>
           <h1 id="errorTitle">Invalid link</h1>
-          <p class="subtitle" id="errorMessage">This assessment link is not valid. Please use the full link sent on WhatsApp, or contact HR for a new one.</p>
-          <a class="btn secondary" href="https://wa.me/919324999527" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> Contact HR
-          </a>
+          <p class="subtitle" id="errorMessage">This assessment link is not valid. Please use the full link sent on WhatsApp.</p>
         </section>
 
         <!-- ALREADY COMPLETED -->
@@ -427,7 +424,7 @@
             if (isInvalidIdError(json, res.status)) {
               showError(
                 'Invalid link',
-                'This assessment link is not valid. Please use the full link sent on WhatsApp, or contact HR for a new one.'
+                'This assessment link is not valid. Please use the full link sent on WhatsApp.'
               );
               return;
             }
@@ -435,14 +432,14 @@
             if (json.code === 'APPS_SCRIPT_URL_MISSING') {
               showError(
                 'Temporarily unavailable',
-                'The assessment service is not configured yet. Please try again later or contact HR.'
+                'The assessment service is not configured yet. Please try again later.'
               );
               return;
             }
 
             showError(
               'Could not load assessment',
-              json.message || 'Please try again later or contact HR.'
+              json.message || 'Please try again later.'
             );
             return;
           }
@@ -467,7 +464,7 @@
           if (!state.questions.length) {
             showError(
               'Questions unavailable',
-              'No questions are available right now. Please try again later or contact HR.'
+              'No questions are available right now. Please try again later.'
             );
             return;
           }
